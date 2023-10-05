@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import aside from "@/store/modules/aside";
 
 Vue.use(Vuex);
 const data = {
@@ -27,7 +28,9 @@ const data = {
     token: () => "",
   },
 
-  modules: {},
+  modules: {
+    aside,
+  },
 };
 
 const store = new Vuex.Store(data);
