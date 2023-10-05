@@ -4,7 +4,8 @@
 ```
 npm install
 npm i -D prettier eslint-config-prettier
-
+npm install babel-plugin-component -D
+npm install -g nrm
 ```
 
 ### Compiles and hot-reloads for development

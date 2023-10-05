@@ -6,6 +6,7 @@ Vue.config.productionTip = false;
 import router from "./router";
 import Particles from "vue2-particles";
 import store from "./store";
+import "@/utils/element-ui";
 Vue.use(Particles);
 
 new Vue({
