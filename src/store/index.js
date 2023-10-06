@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import aside from "@/store/modules/aside";
-
+import player from "@/store/modules/player";
 Vue.use(Vuex);
 const data = {
   state: {
@@ -30,6 +30,7 @@ const data = {
 
   modules: {
     aside,
+    player,
   },
 };
 

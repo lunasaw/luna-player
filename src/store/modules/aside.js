@@ -18,6 +18,8 @@ export default {
     },
   },
   getters: {
-    isCollapse: (state) => state.isCollapse,
+    isCollapse(state) {
+      return state.isCollapse;
+    },
   },
 };

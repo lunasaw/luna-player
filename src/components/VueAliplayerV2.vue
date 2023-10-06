@@ -5,6 +5,12 @@
 export default {
   name: "VueAliplayerV2",
   props: {
+    height: {
+      //播放器高度
+      required: false,
+      type: [String],
+      default: "400px",
+    },
     forbidFastForward: {
       //禁止拖拽快进
       required: false,

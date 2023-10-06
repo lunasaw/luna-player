@@ -3,14 +3,14 @@
     <el-row class="fullscreen-background">
       <el-container class="custom-container">
         <el-header>
-          <el-col :span="4" class="controll-aside">
+          <el-col :span="1" class="controll-aside">
             <el-button
               icon="el-icon-setting"
               circle
               @click="triggerAside"
             ></el-button>
           </el-col>
-          <el-col :span="20">Luna-Player</el-col>
+          <el-col :span="23">Luna-Player</el-col>
         </el-header>
         <el-container>
           <el-aside width="200px" v-show="isCollapse">
@@ -20,8 +20,8 @@
           </el-aside>
           <el-container>
             <el-main>
-              <div>
-                <vue-aliplayer-v2
+              <div style="height: 400px">
+                <luna-player
                   :source="source"
                   ref="VueAliplayerV2"
                   :options="options"
@@ -39,12 +39,11 @@
 <script>
 import PlayerAside from "@/components/PlayerAside.vue";
 import { mapState } from "vuex";
-import VueAliplayerV2 from "@/components/VueAliplayerV2.vue";
-
+import LunaPlayer from "@/components/LunaPlayer.vue";
 export default {
   components: {
     PlayerAside,
-    VueAliplayerV2,
+    LunaPlayer,
   },
   name: "PlayerView",
   data() {
@@ -85,14 +84,12 @@ export default {
   background-color: #99ccff;
   color: #333;
   text-align: center;
-  line-height: 200px;
 }
 
 .el-main {
   background-color: #fff;
   color: #333;
   text-align: center;
-  line-height: 160px;
 }
 
 .custom-container {
