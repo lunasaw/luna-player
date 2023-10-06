@@ -1,6 +1,11 @@
-module.exports = {
-  presets: ["@vue/cli-plugin-babel/preset", ["es2015", { modules: false }]],
-  plugins: [
+module.exports = function (api) {
+  api.cache(false);
+
+  const presets = [
+    "@vue/cli-plugin-babel/preset",
+    ["@babel/preset-env", { modules: false }],
+  ];
+  const plugins = [
     [
       "component",
       {
@@ -8,5 +13,10 @@ module.exports = {
         styleLibraryName: "theme-chalk",
       },
     ],
-  ],
+  ];
+
+  return {
+    presets,
+    plugins,
+  };
 };

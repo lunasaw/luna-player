@@ -19,7 +19,15 @@
             </transition>
           </el-aside>
           <el-container>
-            <el-main>Main</el-main>
+            <el-main>
+              <div>
+                <vue-aliplayer-v2
+                  :source="source"
+                  ref="VueAliplayerV2"
+                  :options="options"
+                />
+              </div>
+            </el-main>
             <el-footer>Footer</el-footer>
           </el-container>
         </el-container>
@@ -31,14 +39,23 @@
 <script>
 import PlayerAside from "@/components/PlayerAside.vue";
 import { mapState } from "vuex";
+import VueAliplayerV2 from "@/components/VueAliplayerV2.vue";
+
 export default {
   components: {
     PlayerAside,
+    VueAliplayerV2,
   },
   name: "PlayerView",
   data() {
     return {
       isAsideCollapsed: false,
+      options: {
+        // source:'//player.alicdn.com/video/aliyunmedia.mp4',
+        isLive: false, //切换为直播流的时候必填
+        // format: 'm3u8'  //切换为直播流的时候必填
+      },
+      source: "//player.alicdn.com/video/aliyunmedia.mp4",
     };
   },
   computed: {
